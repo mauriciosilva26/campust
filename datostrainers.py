@@ -39,6 +39,7 @@ def registrar_trainer():
         return
     trainer["horario"] = ("")
     trainer["area de trabajo"] = ("")
+    trainer["grupo del trainer"] = ("")
     data[doc] = trainer
     
     guardar_datos()
@@ -58,9 +59,22 @@ def area_del_trainer():
     global data
     doc = input("Ingrese el documento del trainer : ")
     if doc in data:
-        estado_del_camper = input("Ingrese el area del trainer: ")
-        data[doc]["area del trainer"] = estado_del_camper
+        areatrainer = input("Ingrese el area del trainer: ")
+        data[doc]["area del trainer"] = areatrainer
         print("area del trainer actualizada")
         guardar_datos()
     else:
         print("El documento ingresado no corresponde a ningún trainer registrado.")
+
+def grupo_del_trainer():
+    global data
+    doc = input("Ingrese el documento del trainer : ")
+    if doc in data:
+        grupotrainer = input("Ingrese el grupo del trainer: ")
+        data[doc]["area del trainer"] = grupotrainer
+        print("area del trainer actualizada")
+        guardar_datos()
+    else:
+        print("El documento ingresado no corresponde a ningún trainer registrado.")
+
+

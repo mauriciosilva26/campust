@@ -41,7 +41,8 @@ def registrar_camper():
     camper["estado"] = ("")
     camper["riesgo"] = ("")
     camper["ruta"] = ("")
-    
+    camper["nota"] = ("")
+    camper["grupo"] = ("")
     data[doc] = camper
     
     guardar_datos()
@@ -71,12 +72,41 @@ def riesgo_camper():
         
 def ruta_camper():
     global data
-    doc = input("Ingrese el documento del camper al que se le asignara el estado: ")
+    doc = input("Ingrese el documento del camper al que se le asignara la ruta: ")
     if doc in data:
-        rutacamper = input("Ingrese el nuevo apellido: ")
-        data[doc]["riesgo"] = rutacamper
-        print("estado actualizado")
+        rutacamper = input("Ingrese la ruta: ")
+        data[doc]["ruta"] = rutacamper
+        print("ruta actualizada")
         guardar_datos()
+    else:
+        print("El documento ingresado no corresponde a ningún camper registrado.")
+
+def nota_camper():
+    global data
+    doc = input("Ingrese el documento del camper al que se le asignara la nota: ")
+    if doc in data:
+        nota1 = float(input("Ingrese la primera nota (60%): "))
+        porcentaje1 = 60
+
+        nota2 = float(input("Ingrese la segunda nota (30%): "))
+        porcentaje2 = 30
+
+        nota3 = float(input("Ingrese la tercera nota (10%): "))
+        porcentaje3 = 10
+
+        if not isinstance(nota1, (int, float)) or not isinstance(nota2, (int, float)) or not isinstance(nota3, (int, float)):
+            print("Las notas deben ser valores numéricos.")
+            return
+
+        if porcentaje1 + porcentaje2 + porcentaje3 != 100:
+            print("Los porcentajes deben sumar 100%.")
+            return
+
+        nota_final = (nota1 * porcentaje1 / 100) + (nota2 * porcentaje2 / 100) + (nota3 * porcentaje3 / 100)
+
+        data[doc]["nota"] = nota_final
+        guardar_datos()
+        print(f"La nota final del camper es: {nota_final}")
     else:
         print("El documento ingresado no corresponde a ningún camper registrado.")
         
@@ -90,6 +120,20 @@ def eliminar_camper():
         guardar_datos()
     else:
         print("El documento ingresado no corresponde a ningún camper registrado.")
+
+
+def grupo_camper():
+    global data
+    doc = input("Ingrese el documento del camper al que se le asignara el grupo: ")
+    if doc in data:
+        grupocamper = input("Ingrese el grupo al que sera asignado: ")
+        data[doc]["grupo"] = grupocamper
+        print("grupo asignado")
+        guardar_datos()
+    else:
+        print("El documento ingresado no corresponde a ningún camper registrado.")
+
+
         
         
 

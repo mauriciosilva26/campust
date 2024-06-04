@@ -1,26 +1,14 @@
 {
-    "64564": {
-        "Nombre": "tryhr",
-        "apellido": "tghrr",
-        "direccion": "gthyth",
-        "acudiente": "tyhrt",
-        "telefono": 564
-    },
-    "5435": {
-        "Nombre": "fsdf",
-        "apellido": "fsdfs",
-        "direccion": "fsfs",
-        "acudiente": "sdfsd",
-        "telefono": 43534
-    },
-    "53453": {
+    "1234": {
         "Nombre": "pedro",
-        "apellido": "gfdsf",
-        "direccion": "dsfgds",
-        "acudiente": "dfsd",
-        "telefono": 544345,
+        "apellido": "efwe",
+        "direccion": "erfw",
+        "acudiente": "ewr",
+        "telefono": 43234,
         "estado": "",
         "riesgo": "",
-        "ruta": ""
+        "ruta": "java",
+        "nota": "",
+        "grupo": "u1"
     }
 }
