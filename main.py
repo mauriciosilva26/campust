@@ -17,15 +17,18 @@ def menu_principal():
             print("Valor incorrecto!!")            
         if rol == 1:
             letreros.letrero1()
-            print("1. trainers\n 2.campers")
+            print("1. trainers\n 2.campers\n 3.rutas de entrenamiento\n 4. reportes")
             opcion=int(input("ingrese la opcion que desea realizar: "))
             if opcion == 1:
-                print("1. registar trainer\n 2. modificar trainer\n 3.rutas de entrenamiento\n 4. reportes")
+                print ("----------------------------------------")
+                print("1. registar trainer\n 2. modificar trainer")
                 opct=int(input("ingrese la opcion a realizar: "))
                 if opct == 1:
+                    print ("----------------------------------------")
                     datostrainers.cargar_datos()
                     datostrainers.registrar_trainer()
                 elif opct ==2:
+                    print("------------------------------------------")
                     datostrainers.cargar_datos()
                     print("que opccion desea modificar del trainer:\n 1. horario\n 2. area de entrenamiento\n 3.agregar grupo al trainer")
                     
@@ -88,7 +91,6 @@ def menu_principal():
                 print("Que desea hacer ")
                 print("1.Campers que pasaron el examen inicial\n2. Entrenadores que se encuentran trabajando con CampusLands\n3.ingresar un nuevo camper graduado\n4.Mostrar campers graduados ")
                 opcrprte= int(input("Ingreseuna opcion"))
-               
                 if opcrprte == 1:
                     matriculas.mostrar_camper_admitidos()
                 elif opcrprte == 2:
@@ -102,12 +104,16 @@ def menu_principal():
             print("1.dar notas a un camper\n 2.mostar grupo\n 3.salir") 
             opctn= int(input("ingrese la opcion que desea realizar"))    
             if opctn == 1:
+                print("-----------------------------------------")
                 datos.imprimir_camper_info()
                 datos.cargar_datos()
                 datos.nota_camper()
             elif opctn == 2:
-                agrupar.agrupar_y_imprimir(datos.cargar_datos())
-            elif opctn == 3:
+                print("--------------------------------")
+                datos.imprimir_camper_info()
+                datos.cargar_datos()
+                datos.imprimir_grupo_camper()
+            elif opctn ==3:
                 print ("saliendo")
 
         elif rol == 3:
