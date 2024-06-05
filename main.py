@@ -1,7 +1,6 @@
 import datos
 import datostrainers
 import letreros
-import agrupar
 def menu_principal():
     datos.cargar_datos()
     while True:
@@ -29,12 +28,15 @@ def menu_principal():
                     
                     opctm=int(input("ingrese la opcion que desea modificar: "))
                     if opctm ==1:
+                        datostrainers.imprimir_documentos_y_nombres()
                         datostrainers.cargar_datos()
                         datostrainers.horario_del_trainer()
                     elif opctm ==2:
+                        datostrainers.imprimir_documentos_y_nombres()
                         datostrainers.cargar_datos()
                         datostrainers.area_del_trainer()
                     elif opctm == 3:
+                        datostrainers.imprimir_documentos_y_nombres()
                         datostrainers.cargar_datos()
                         datostrainers.grupo_del_trainer()
             elif opcion==2:
@@ -82,10 +84,12 @@ def menu_principal():
 
         elif rol == 3:
             print("1. ver notas\n 2. salir")
-            opci=int(input())
-            datos.cargar_datos()
-            datos.imprimir_nota_camper()
-
+            opci=int(input("ingrese la opcion que desea realizar"))
+            if opci == 1:
+                datos.cargar_datos()
+                datos.imprimir_nota_camper()
+            elif opci == 2:
+                print ("salir")
                             
                         
                     
