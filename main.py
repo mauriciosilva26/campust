@@ -59,19 +59,23 @@ def menu_principal():
                         datos.cargar_datos()
                         datos.estado_camper()
                     elif opccm == 2:
+                        print("----------------------------------")
                         datos.imprimir_camper_info()
                         datos.cargar_datos()
                         datos.riesgo_camper()
                     elif opccm == 3:
+                        print("---------------------------------")
                         datos.imprimir_camper_info()
                         print("rutas:\n nodaJS\n java\n javaScrip")
                         datos.cargar_datos()
                         datos.ruta_camper()
                     elif opccm == 4:
+                        print("--------------------------------")
                         datos.imprimir_camper_info()
                         datos.cargar_datos()
                         datos.eliminar_camper()
                     elif opccm == 5:
+                        print("-------------------------------")
                         datos.imprimir_camper_info()
                         datos.cargar_datos()
                         datos.grupo_camper()
@@ -120,6 +124,7 @@ def menu_principal():
             print("1. ver notas\n 2. salir")
             opci=int(input("ingrese la opcion que desea realizar"))
             if opci == 1:
+                print("----------------------------")
                 datos.cargar_datos()
                 datos.imprimir_nota_camper()
             elif opci == 2:
