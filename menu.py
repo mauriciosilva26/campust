@@ -7,3 +7,4 @@ print("❉   campuslands ⌨       ❉")
 print("❉                       ❉")
 print("❉ ❉ ❉ ❉ ❉ ❉ ❉ ❉ ❉ ❉ ❉ ❉ ❉")
 main.menu_principal()
+

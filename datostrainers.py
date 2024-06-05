@@ -76,5 +76,8 @@ def grupo_del_trainer():
         guardar_datos()
     else:
         print("El documento ingresado no corresponde a ningún trainer registrado.")
+        
+
+
 
 

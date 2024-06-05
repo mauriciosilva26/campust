@@ -8,7 +8,19 @@
         "estado": "",
         "riesgo": "",
         "ruta": "java",
-        "nota": "",
+        "nota": 70.0,
         "grupo": "u1"
+    },
+    "321": {
+        "Nombre": "gtfgdsf",
+        "apellido": "fgsdf",
+        "direccion": "sfsd",
+        "acudiente": "sfsd",
+        "telefono": 4535,
+        "estado": "",
+        "riesgo": "",
+        "ruta": "",
+        "nota": 60.0,
+        "grupo": ""
     }
 }

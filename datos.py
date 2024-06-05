@@ -134,6 +134,32 @@ def grupo_camper():
         print("El documento ingresado no corresponde a ningún camper registrado.")
 
 
+def imprimir_nota_camper():
+    global data
+    doc = input("Ingrese el documento del camper para imprimir la nota: ")
+    if doc in data:
+        camper = data[doc]
+        nombre = camper.get("Nombre", "")
+        apellido = camper.get("apellido", "")
+        nota = camper.get("nota", "")
+        if nombre and apellido and nota:
+            print(f"Nombre: {nombre} {apellido}, Nota Final: {nota}")
+        else:
+            print(f"No se encontró información completa para el camper.")
+    else:
+        print("El documento ingresado no corresponde a ningún camper registrado.") 
         
+def imprimir_camper_info():
+    global data
+    print("Información de todos los Campers:\n")
+    for doc, camper in data.items():
+        nombre = camper.get("Nombre", "")
+        apellido = camper.get("apellido", "")
+        if nombre and apellido:
+            print(f"Documento: {doc}, Nombre: {nombre} {apellido}")
+        else:
+            print(f"No se encontró información completa para el camper con documento {doc}.")
+
+
         
 
