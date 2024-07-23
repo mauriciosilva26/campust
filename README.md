@@ -28,6 +28,10 @@ descargar el repositorio e iniciar el archivo main.py
 * registrar camper
 * registrar tainer
 * cargar y descargar informacion
-* 
+* estado de los camper
+* nota de los camper
+* horario del tariner
+* grupo del trainer
+* area del trainer
 
 
